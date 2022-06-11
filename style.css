@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #005F73;
+    font-family: 'Anton', sans-serif;
+}
+
+p {
+    margin: 0;
+}
+
+.main-wrapper {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -1em 0;
+    position: fixed;
+    top: 0px;
+    left: -110px;
+    animation: rotater 2s linear infinite;
+}
+
+.main-wrapper  {
+    filter: drop-shadow(0 0 2rem black);
+}
+
+@keyframes rotater {
+    0% {transform: rotate(0deg);}
+    25% {transform: rotate(0.3deg) scale(1.01);}
+    38% {transform: translateY(2px);}
+    50% {transform: rotate(0deg) scale(.99) ;}
+    75% {transform: rotate(1deg);}
+    88% {transform: translateY(-3px);}
+    100% {transform: rotate(0deg) ;}
+}
+
+.top {
+    height: 350px;
+    width: 350px;
+    background: #94D2BD;
+    color: white;
+    text-transform: uppercase;
+    font-size: 150px;
+    letter-spacing: 5px;
+    position: fixed;
+    top: 400px;
+    left: 354px;
+    transition: all 180ms;
+}
+
+.square {
+    height: 150px;
+    width: 100px;
+    background: white;
+    z-index: 2;
+    position: fixed;
+    top: 590px;
+    left: 755px;
+    pointer-events: none;
+    transform: skewY(-135deg);
+}
+
+.top > div:hover {
+    animation: pulse 2s ease-in-out infinite;
+    
+}
+
+.circle {
+    height: 100px;
+    width: 150px;
+    transform: skew(45deg);
+    border-radius: 100%;
+    background: white;
+    z-index: 2;
+    position: fixed;
+    top: 800px;
+    left: 555px;
+    pointer-events: none;
+
+}
+
+.top:hover {
+    background: none;
+}
+
+@keyframes pulse {
+    0% {opacity: 1; background: red;}
+    100% {opacity: 0; background: white;}
+}
+
+.right {
+    background: #3C9074;
+    height: 350px;
+    width: 200px;
+    transform: skewY(-135deg);
+    position: fixed;
+    top: 500px;
+    left: 704px;
+    display: block;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 75px 150px 75px;
+    border-color: transparent transparent white transparent;
+    position: fixed;
+    top: 500px;
+    left: 452.5px;
+    pointer-events: none;
+    z-index: 2;
+   
+}
+
+.right:hover {
+    background: none;
+}
+
+.right-text {
+    color: white;
+    position: fixed;
+    left: 690px;
+    top: 570px;
+    transform: rotate(270deg) skew(-45deg);
+    font-size: 50px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    display: block;
+
+}
+
+.front {
+    height: 200px;
+    width: 350px;
+    background: #5DBB9C;
+    position: fixed;
+    left: 454px;
+    top: 749px;
+    transform: skew(45deg);
+}
+
+.front:hover {
+    background: none;
+}
+
+.meteor {
+    height: 2px;
+    width: 2px;
+    background: white;
+    position: absolute;
+    top: -10px;
+    animation: meteorfly 10s linear ;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.meteor2 {
+    height: 2.5px;
+    width: 2.5px;
+    background: beige;
+    position: absolute;
+    top: -10px;
+    animation: meteorfly 6s linear ;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+.meteor3 {
+    height: 2.8px;
+    width: 2.8px;
+    background: goldenrod;
+    position: absolute;
+    top: -10px;
+    animation: meteorfly 4s linear ;
+    z-index: 1;
+    opacity: 0.7;
+}
+
+@keyframes meteorfly {
+    0% {transform: translateY(0vh);}
+    50% {transform: translateY(50vh);}
+    100% {transform: translateY(99vh);}
+}
